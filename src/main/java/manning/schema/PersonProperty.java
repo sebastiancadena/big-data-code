@@ -150,8 +150,7 @@ public class PersonProperty implements org.apache.thrift.TBase<PersonProperty, P
   public PersonProperty deepCopy() {
     return new PersonProperty(this);
   }
-
-  @Override
+  
   public void clear() {
     this.id = null;
     this.property = null;
@@ -302,7 +301,6 @@ public class PersonProperty implements org.apache.thrift.TBase<PersonProperty, P
     return list.hashCode();
   }
 
-  @Override
   public int compareTo(PersonProperty other) {
     if (!getClass().equals(other.getClass())) {
       return getClass().getName().compareTo(other.getClass().getName());
@@ -471,14 +469,13 @@ public class PersonProperty implements org.apache.thrift.TBase<PersonProperty, P
 
   private static class PersonPropertyTupleScheme extends TupleScheme<PersonProperty> {
 
-    @Override
+  
     public void write(org.apache.thrift.protocol.TProtocol prot, PersonProperty struct) throws org.apache.thrift.TException {
       TTupleProtocol oprot = (TTupleProtocol) prot;
       struct.id.write(oprot);
       struct.property.write(oprot);
     }
 
-    @Override
     public void read(org.apache.thrift.protocol.TProtocol prot, PersonProperty struct) throws org.apache.thrift.TException {
       TTupleProtocol iprot = (TTupleProtocol) prot;
       struct.id = new PersonID();

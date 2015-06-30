@@ -83,7 +83,7 @@ public class UniquesOverTime {
     public static class PageviewScheme implements MultiScheme {
         TDeserializer _des;
 
-        @Override
+       
         public Iterable<List<Object>> deserialize(byte[] bytes) {
             Data data = new Data();
             if(_des==null) _des = new TDeserializer();
@@ -103,7 +103,6 @@ public class UniquesOverTime {
             return ret;
         }
 
-        @Override
         public Fields getOutputFields() {
             return new Fields("user", "url", "timestamp");
         }
@@ -112,7 +111,6 @@ public class UniquesOverTime {
     public static class ExtractFilterBolt extends BaseBasicBolt {
         private static final int HOUR_SECS = 60 * 60;
 
-        @Override
         public void execute(Tuple tuple, BasicOutputCollector collector) {
             PersonID user = (PersonID) tuple.getValue(0);
             String url = tuple.getString(1);
@@ -129,7 +127,6 @@ public class UniquesOverTime {
             }
         }
 
-        @Override
         public void declareOutputFields(OutputFieldsDeclarer declarer) {
             declarer.declare(new Fields("domain", "url", "bucket", "user"));
         }
@@ -163,7 +160,6 @@ public class UniquesOverTime {
         }
 
 
-        @Override
         public void execute(Tuple tuple, BasicOutputCollector collector) {
             String url = tuple.getString(1);
             int bucket = tuple.getInteger(2);
@@ -188,7 +184,6 @@ public class UniquesOverTime {
             }
         }
 
-        @Override
         public void declareOutputFields(OutputFieldsDeclarer declarer) {
         }
     }

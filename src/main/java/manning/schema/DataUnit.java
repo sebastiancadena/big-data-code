@@ -445,7 +445,6 @@ public class DataUnit extends org.apache.thrift.TUnion<DataUnit, DataUnit._Field
     return other != null && getSetField() == other.getSetField() && getFieldValue().equals(other.getFieldValue());
   }
 
-  @Override
   public int compareTo(DataUnit other) {
     int lastComparison = org.apache.thrift.TBaseHelper.compareTo(getSetField(), other.getSetField());
     if (lastComparison == 0) {
@@ -454,8 +453,6 @@ public class DataUnit extends org.apache.thrift.TUnion<DataUnit, DataUnit._Field
     return lastComparison;
   }
 
-
-  @Override
   public int hashCode() {
     List<Object> list = new ArrayList<Object>();
     list.add(this.getClass().getName());

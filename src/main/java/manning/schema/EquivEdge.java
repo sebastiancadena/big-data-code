@@ -151,7 +151,6 @@ public class EquivEdge implements org.apache.thrift.TBase<EquivEdge, EquivEdge._
     return new EquivEdge(this);
   }
 
-  @Override
   public void clear() {
     this.id1 = null;
     this.id2 = null;
@@ -302,7 +301,6 @@ public class EquivEdge implements org.apache.thrift.TBase<EquivEdge, EquivEdge._
     return list.hashCode();
   }
 
-  @Override
   public int compareTo(EquivEdge other) {
     if (!getClass().equals(other.getClass())) {
       return getClass().getName().compareTo(other.getClass().getName());
@@ -471,14 +469,13 @@ public class EquivEdge implements org.apache.thrift.TBase<EquivEdge, EquivEdge._
 
   private static class EquivEdgeTupleScheme extends TupleScheme<EquivEdge> {
 
-    @Override
     public void write(org.apache.thrift.protocol.TProtocol prot, EquivEdge struct) throws org.apache.thrift.TException {
       TTupleProtocol oprot = (TTupleProtocol) prot;
       struct.id1.write(oprot);
       struct.id2.write(oprot);
     }
 
-    @Override
+
     public void read(org.apache.thrift.protocol.TProtocol prot, EquivEdge struct) throws org.apache.thrift.TException {
       TTupleProtocol iprot = (TTupleProtocol) prot;
       struct.id1 = new PersonID();

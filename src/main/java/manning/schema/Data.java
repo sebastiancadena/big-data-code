@@ -151,7 +151,6 @@ public class Data implements org.apache.thrift.TBase<Data, Data._Fields>, java.i
     return new Data(this);
   }
 
-  @Override
   public void clear() {
     this.pedigree = null;
     this.dataunit = null;
@@ -302,7 +301,6 @@ public class Data implements org.apache.thrift.TBase<Data, Data._Fields>, java.i
     return list.hashCode();
   }
 
-  @Override
   public int compareTo(Data other) {
     if (!getClass().equals(other.getClass())) {
       return getClass().getName().compareTo(other.getClass().getName());
@@ -474,14 +472,14 @@ public class Data implements org.apache.thrift.TBase<Data, Data._Fields>, java.i
 
   private static class DataTupleScheme extends TupleScheme<Data> {
 
-    @Override
+ 
     public void write(org.apache.thrift.protocol.TProtocol prot, Data struct) throws org.apache.thrift.TException {
       TTupleProtocol oprot = (TTupleProtocol) prot;
       struct.pedigree.write(oprot);
       struct.dataunit.write(oprot);
     }
 
-    @Override
+   
     public void read(org.apache.thrift.protocol.TProtocol prot, Data struct) throws org.apache.thrift.TException {
       TTupleProtocol iprot = (TTupleProtocol) prot;
       struct.pedigree = new Pedigree();

@@ -169,7 +169,6 @@ public class Pedigree implements org.apache.thrift.TBase<Pedigree, Pedigree._Fie
     return new Pedigree(this);
   }
 
-  @Override
   public void clear() {
     set_true_as_of_secs_isSet(false);
     this.true_as_of_secs = 0;
@@ -379,7 +378,6 @@ public class Pedigree implements org.apache.thrift.TBase<Pedigree, Pedigree._Fie
     return list.hashCode();
   }
 
-  @Override
   public int compareTo(Pedigree other) {
     if (!getClass().equals(other.getClass())) {
       return getClass().getName().compareTo(other.getClass().getName());
@@ -578,7 +576,7 @@ public class Pedigree implements org.apache.thrift.TBase<Pedigree, Pedigree._Fie
 
   private static class PedigreeTupleScheme extends TupleScheme<Pedigree> {
 
-    @Override
+
     public void write(org.apache.thrift.protocol.TProtocol prot, Pedigree struct) throws org.apache.thrift.TException {
       TTupleProtocol oprot = (TTupleProtocol) prot;
       oprot.writeI32(struct.true_as_of_secs);
@@ -586,7 +584,6 @@ public class Pedigree implements org.apache.thrift.TBase<Pedigree, Pedigree._Fie
       struct.system.write(oprot);
     }
 
-    @Override
     public void read(org.apache.thrift.protocol.TProtocol prot, Pedigree struct) throws org.apache.thrift.TException {
       TTupleProtocol iprot = (TTupleProtocol) prot;
       struct.true_as_of_secs = iprot.readI32();

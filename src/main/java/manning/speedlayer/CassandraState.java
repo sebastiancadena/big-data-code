@@ -99,7 +99,6 @@ public class CassandraState<T> implements IBackingMap<T> {
             }
         }
 
-        @Override
         public State makeState(Map conf, IMetricsContext context, int partitionIndex, int numPartitions) {
             Cluster cluster = HFactory.getOrCreateCluster(
                     "mycluster", _connStr);
@@ -144,7 +143,6 @@ public class CassandraState<T> implements IBackingMap<T> {
 
     }
 
-    @Override
     public List<T> multiGet(List<List<Object>> keys) {
         List<T> ret = new ArrayList();
         for(List<Object> keyCol: keys) {
@@ -160,7 +158,6 @@ public class CassandraState<T> implements IBackingMap<T> {
         return ret;
     }
 
-    @Override
     public void multiPut(List<List<Object>> keys, List<T> vals) {
         for(int i=0; i<keys.size(); i++) {
             List<Object> keyCol = keys.get(i);

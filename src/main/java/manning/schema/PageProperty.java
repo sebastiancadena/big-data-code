@@ -151,7 +151,6 @@ public class PageProperty implements org.apache.thrift.TBase<PageProperty, PageP
     return new PageProperty(this);
   }
 
-  @Override
   public void clear() {
     this.id = null;
     this.property = null;
@@ -302,7 +301,6 @@ public class PageProperty implements org.apache.thrift.TBase<PageProperty, PageP
     return list.hashCode();
   }
 
-  @Override
   public int compareTo(PageProperty other) {
     if (!getClass().equals(other.getClass())) {
       return getClass().getName().compareTo(other.getClass().getName());
@@ -471,14 +469,14 @@ public class PageProperty implements org.apache.thrift.TBase<PageProperty, PageP
 
   private static class PagePropertyTupleScheme extends TupleScheme<PageProperty> {
 
-    @Override
+  
     public void write(org.apache.thrift.protocol.TProtocol prot, PageProperty struct) throws org.apache.thrift.TException {
       TTupleProtocol oprot = (TTupleProtocol) prot;
       struct.id.write(oprot);
       struct.property.write(oprot);
     }
 
-    @Override
+   
     public void read(org.apache.thrift.protocol.TProtocol prot, PageProperty struct) throws org.apache.thrift.TException {
       TTupleProtocol iprot = (TTupleProtocol) prot;
       struct.id = new PageID();

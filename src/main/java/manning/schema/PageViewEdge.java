@@ -165,7 +165,6 @@ public class PageViewEdge implements org.apache.thrift.TBase<PageViewEdge, PageV
     return new PageViewEdge(this);
   }
 
-  @Override
   public void clear() {
     this.person = null;
     this.page = null;
@@ -367,7 +366,6 @@ public class PageViewEdge implements org.apache.thrift.TBase<PageViewEdge, PageV
     return list.hashCode();
   }
 
-  @Override
   public int compareTo(PageViewEdge other) {
     if (!getClass().equals(other.getClass())) {
       return getClass().getName().compareTo(other.getClass().getName());
@@ -567,7 +565,7 @@ public class PageViewEdge implements org.apache.thrift.TBase<PageViewEdge, PageV
 
   private static class PageViewEdgeTupleScheme extends TupleScheme<PageViewEdge> {
 
-    @Override
+    
     public void write(org.apache.thrift.protocol.TProtocol prot, PageViewEdge struct) throws org.apache.thrift.TException {
       TTupleProtocol oprot = (TTupleProtocol) prot;
       struct.person.write(oprot);
@@ -575,7 +573,7 @@ public class PageViewEdge implements org.apache.thrift.TBase<PageViewEdge, PageV
       oprot.writeI64(struct.nonce);
     }
 
-    @Override
+ 
     public void read(org.apache.thrift.protocol.TProtocol prot, PageViewEdge struct) throws org.apache.thrift.TException {
       TTupleProtocol iprot = (TTupleProtocol) prot;
       struct.person = new PersonID();

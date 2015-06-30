@@ -153,7 +153,6 @@ public class Location implements org.apache.thrift.TBase<Location, Location._Fie
     return new Location(this);
   }
 
-  @Override
   public void clear() {
     this.city = null;
     this.state = null;
@@ -355,7 +354,7 @@ public class Location implements org.apache.thrift.TBase<Location, Location._Fie
     return list.hashCode();
   }
 
-  @Override
+  
   public int compareTo(Location other) {
     if (!getClass().equals(other.getClass())) {
       return getClass().getName().compareTo(other.getClass().getName());
@@ -557,7 +556,7 @@ public class Location implements org.apache.thrift.TBase<Location, Location._Fie
 
   private static class LocationTupleScheme extends TupleScheme<Location> {
 
-    @Override
+    
     public void write(org.apache.thrift.protocol.TProtocol prot, Location struct) throws org.apache.thrift.TException {
       TTupleProtocol oprot = (TTupleProtocol) prot;
       BitSet optionals = new BitSet();
@@ -582,7 +581,7 @@ public class Location implements org.apache.thrift.TBase<Location, Location._Fie
       }
     }
 
-    @Override
+    
     public void read(org.apache.thrift.protocol.TProtocol prot, Location struct) throws org.apache.thrift.TException {
       TTupleProtocol iprot = (TTupleProtocol) prot;
       BitSet incoming = iprot.readBitSet(3);
